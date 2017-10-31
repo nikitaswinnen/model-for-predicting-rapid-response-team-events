@@ -1,8 +1,9 @@
 # Model For Predicting Rapid Response Events
 
+
 # Overview
 
-### Below is the file structure of the project documentation
+## Below is the file structure of the project documentation
 
 ```
 Overview Documentation
@@ -73,57 +74,55 @@ We typically explored the data using the Impala query editor in Hue. Once the da
 
 datamodel.zip is a zip file of the Cerner data dictionary.
 
-# notebooks
+
+# Notebooks
 
 ### This section talks about what is in each of the notebooks and why we did what we did
 
-## analytics_helpers (subfolder)
+## Analytics_helpers (subfolder)
 Contains analytics_helpers.py
 
-#### analytics_helpers.py
+#### Analytics_helpers.py
 A python library that contains useful helper functions for exploratory analysis, data cleaning, and visualization.
 
-## modeling (subfolder)
+## Modeling (subfolder)
 Contains notebooks which cover the creation of the predictive model and cross validation.
 
-#### modeling_base.ipynb
+#### Modeling_base.ipynb
 The main notebook for modeling.
 
-#### modeling_diff_algorithms.ipynb
+#### Modeling_diff_algorithms.ipynb
 Exploring different modeling algorithms -- for reference only
-
 
 #### RunModelOnExamplePatients.ipynb
 Extracts a small subset of patients, collects their statistics into a modeling tables based on different timeframes, loads the saved model, uses model to generate risk scores, then writes the scores and modeling tables to
 
-#### gbc_base.compressed
+#### Gbc_base.compressed
 Note: The trained model was removed from the public facing repo.
 The saved model file, in sklearn's [joblib](http://scikit-learn.org/stable/modules/model_persistence.html) format.
-
-
 
 ## EDA (subfolder)
 Contains notebooks which cover Exploratory Data Analysis of the data.
 
-#### encounter_durations[EDA].ipynb
+#### Encounter_durations[EDA].ipynb
 Explores encounter durations for patients with and without RRT events. Explores subselection of patients without RRT events who have similar encounter durations to patients with RRT events.
 
-#### explore_vitals_by_encounter[EDA].ipynb
+#### Explore_vitals_by_encounter[EDA].ipynb
 Creates time series of vitals signs for RRT patients which indicate time of RRT.
 
-#### medications[EDA].ipynb
+#### Medications[EDA].ipynb
 Explores the number of patients taking different kinds of medications, and how that breaks down for patients with and without RRT events
 
-#### multi_rrts[EDA].ipynb
+#### Multi_rrts[EDA].ipynb
 Explores patients with multiple RRT events. Only text output.
 
-#### probe_encounter_types_classes[EDA].ipynb
+#### Probe_encounter_types_classes[EDA].ipynb
 Examine breakdowns of different patient/encounter types. Only text output.
 
-#### rrt_reasons[EDA].ipynb
+#### Rrt_reasons[EDA].ipynb
 Explore the reasons for RRT events & their frequencies
 
-#### vitals_avg_over_visit[EDA].ipynb
+#### Vitals_avg_over_visit[EDA].ipynb
 Compare if patients with RRTs have different average vitals than patients without RRTs, visually.
 
 ## Features used & mapping to Cerner records (data dictionary)
